@@ -9,5 +9,11 @@
 .current {
   background-color: grey; }
 
-.navbar .active {
-  background-color: #444; }
+.jumbotron {
+  text-align: center;
+  height: 100vh; }
+
+.navbar {
+  padding: 0 1rem; }
+  .navbar .active {
+    background-color: #444; }

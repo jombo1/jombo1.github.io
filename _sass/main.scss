@@ -14,7 +14,13 @@ $color-text: #111;
 
 }
 
+.jumbotron {
+  text-align: center;
+  height: 100vh;
+}
+
 .navbar {
+  padding: 0 1rem;
   .active {
     background-color: #444;
   }
