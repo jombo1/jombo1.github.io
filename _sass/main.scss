@@ -1,8 +1,22 @@
-body {
+$color-bg: #eee;
+$color-text: #111;
+
+.container {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 60%;
+  line-height: 1.5;
 }
 
 .current {
   background-color: grey;
 
 }
+
+.navbar {
+  .active {
+    background-color: #444;
+  }
+}
+
