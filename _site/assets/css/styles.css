@@ -1,24 +1,45 @@
 /* @import "reset"; */
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #eee; }
+
+li {
+  list-style: none; }
+
 .container {
+  padding-top: 2.5rem;
+  background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   margin: 0 auto;
   max-width: 60%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  height: 100%; }
 
 .current {
   background-color: grey; }
 
 .jumbotron {
   text-align: center;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #aaa;
+  margin: 0; }
 
 .navbar {
   padding: 0 1rem; }
   .navbar .active {
     background-color: #444; }
 
-.footer {
+.wrapper {
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 12.5rem;
+  min-height: 100%; }
+
+footer {
+  position: absolute;
+  bottom: 0;
   text-align: center;
   padding: 5rem;
   color: #ddd;
