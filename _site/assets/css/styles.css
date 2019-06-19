@@ -8,7 +8,8 @@ li {
   list-style: none; }
 
 .container {
-  padding-top: 2.5rem;
+  padding: 4.5rem 2rem 2rem 2rem;
+  /* ^>v< */
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
@@ -24,7 +25,9 @@ li {
   text-align: center;
   height: 100vh;
   background-color: #aaa;
-  margin: 0; }
+  margin: 0;
+  background-image: url("../images/jumbotron_bg.jpg");
+  background-size: cover; }
 
 .navbar {
   padding: 0 1rem; }
