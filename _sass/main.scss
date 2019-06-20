@@ -22,12 +22,21 @@ li {
   height: 100%;
 }
 
+.home-content {
+  h3 {
+    text-align: center;
+  }
+}
+
 .current {
   background-color: grey;
 
 }
 
 .jumbotron {
+  .intro {
+    padding-top: 30vh;
+  }
   text-align: center;
   height: 100vh;
   background-color: #aaa;
@@ -51,6 +60,9 @@ li {
 }
 
 footer{
+  a {
+    display: inline;
+  }
   position: absolute;
   bottom: 0;
   text-align: center;

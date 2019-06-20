@@ -18,6 +18,9 @@ li {
   line-height: 1.5;
   height: 100%; }
 
+.home-content h3 {
+  text-align: center; }
+
 .current {
   background-color: grey; }
 
@@ -28,6 +31,8 @@ li {
   margin: 0;
   background-image: url("../images/jumbotron_bg.jpg");
   background-size: cover; }
+  .jumbotron .intro {
+    padding-top: 30vh; }
 
 .navbar {
   padding: 0 1rem; }
@@ -47,3 +52,5 @@ footer {
   padding: 5rem;
   color: #ddd;
   background-color: #333; }
+  footer a {
+    display: inline; }
