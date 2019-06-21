@@ -5,6 +5,7 @@ html, body {
   margin: 0;
   height: 100%;
   background-color: #eee;
+  font-family: 'Saira Semi Condensed', sans-serif;
 }
 
 li {
@@ -14,7 +15,6 @@ li {
 .main-container {
   padding: 4.5rem 2rem 2rem 2rem; /* ^>v< */
   background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   margin: 0 auto;
   line-height: 1.5;
@@ -23,6 +23,7 @@ li {
 
 .home-content {
   text-align: center;
+  padding-bottom: 10rem;
 }
 
 form {
@@ -53,6 +54,10 @@ form {
   }
 }
 
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #fff;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -67,6 +72,7 @@ form {
 footer{
   a {
     display: inline;
+    color: #ddd;
   }
   position: absolute;
   bottom: 0;
@@ -75,13 +81,31 @@ footer{
   color: #ddd;
   background-color: #333;
 }
-.avertium {
+.avertium, .asu {
   img{
     max-height: 5rem;
+    margin: 2rem;
+  }
+  p {
+    padding-top: 1rem;
   }
 }
-.asu {
-  img{
-    max-height: 5rem;
+
+hr {
+  border: none;
+  background-color: navy;
+  height: 5px;
+  max-width: 50px
+}
+
+h3 {
+  padding-top: 3rem;
+}
+
+.intro {
+  color: #fff;
+  text-shadow: 1px 1px #111;
+  h1 {
+    text-shadow: 2px 2px #111;
   }
 }

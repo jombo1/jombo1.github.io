@@ -5,7 +5,7 @@ title: home
 <div class="jumbotron jumbotron-fluid justify-content-center">
   <div class="intro">
     <h1>Eric DeRienzo</h1>
-    <p>Programming Extrordinare (actually i suck)</p>
+    <p>Doer of Things</p>
   </div>
 </div>
 
@@ -13,43 +13,51 @@ title: home
   <div class="col-md-8 main-container home-content">
     <p>I'm a lad residing in Phoenix currently working as a security analyst for Avertium. In my spare time I'm usually drawing, learning web development, or practicing Japanese.</p>
     <h3>Work & Education</h3>
+    <hr />
     <div class="row">
-      <div class="col-md-6 avertium">
+      <div class="col-lg-6 avertium">
         <img src="/assets/images/avertium.png" alt="avertium">
         <h4>Security Analyst</h4>
+        <p>I detect, investigate, and respond to cyber attacks and vulnerabilities within various companies</p>
       </div>
-      <div class="col-md-6 asu">
+      <div class="col-lg-6 asu">
         <img src="/assets/images/asu.png" alt="asu">
         <h4>B.S. in Applied Computing, 2018</h4>
-        <p>Arizona State University</p>
+        <p>New College of Interdisciplinary Arts & Sciences, <br> Arizona State University West</p>
       </div>
     </div>
     <h3>Contact</h3>
+    <hr />
 
     <p> Want to get in touch? Shoot me an email!</p>
 
-    <form action="https://formspree.io/me@ericderienzo.com" method="POST" />
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="emailName">Name</label>
-          <input type="text" name-"name" class="form-control" id="emailName" placeholder="Enter name">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="emailInput">Email address</label>
-          <input type="email" name="_replyto" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <form action="https://formspree.io/me@ericderienzo.com" method="POST" />
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="emailName">Name</label>
+              <input type="text" name-"name" class="form-control" id="emailName" placeholder="Enter name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="emailInput">Email address</label>
+              <input type="email" name="_replyto" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="emailSubject">Subject</label>
+            <input type="text" name="_subject" class="form-control" id="emailSubject" placeholder="Enter subject">
+          </div>
+          <div class="form-group">
+            <label for="emailText">Message</label>
+            <textarea name="message" class="form-control" id="emailText" cols="30" rows="5" placeholder="Type your message!"></textarea>
+          </div>
+          <input type="hidden" name="_next" value="/blog.html">
+          <button type="submit" class="btn btn-block btn-success">Send</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="emailSubject">Subject</label>
-        <input type="text" name="_subject" class="form-control" id="emailSubject" placeholder="Message Subject">
-      </div>
-      <div class="form-group">
-        <label for="emailText">Message</label>
-        <textarea name="message" class="form-control" id="emailText" cols="30" rows="5" placeholder="Type your message!"></textarea>
-      </div>
-      <input type="hidden" name="_next" value="/blog.html">
-      <button type="submit" class="btn btn-block btn-success">Send</button>
-    </form>
+    </div>
+        
   </div>
 </div>
 
