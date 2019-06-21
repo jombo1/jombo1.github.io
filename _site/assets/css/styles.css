@@ -7,19 +7,21 @@ html, body {
 li {
   list-style: none; }
 
-.container {
+.main-container {
   padding: 4.5rem 2rem 2rem 2rem;
   /* ^>v< */
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   margin: 0 auto;
-  max-width: 60%;
   line-height: 1.5;
   height: 100%; }
 
-.home-content h3 {
+.home-content {
   text-align: center; }
+
+form {
+  text-align: left; }
 
 .current {
   background-color: grey; }
@@ -39,6 +41,9 @@ li {
   .navbar .active {
     background-color: #444; }
 
+.navbar-toggler {
+  border: none; }
+
 .wrapper {
   box-sizing: border-box;
   position: relative;
@@ -54,3 +59,9 @@ footer {
   background-color: #333; }
   footer a {
     display: inline; }
+
+.avertium img {
+  max-height: 5rem; }
+
+.asu img {
+  max-height: 5rem; }

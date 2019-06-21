@@ -45,37 +45,50 @@
   </div>
 </div>
 
-<div class="container home-content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisi risus, luctus a ex tempor, tempus pharetra purus. Sed in tortor at diam eleifend pretium. Ut vulputate tellus fermentum, tincidunt magna at, volutpat neque. Integer tempor a leo a lobortis. Sed eu arcu non dolor lacinia pulvinar. Quisque vestibulum congue leo, ut fringilla tellus auctor at. Sed condimentum pretium semper. Phasellus et imperdiet elit. Vivamus viverra elementum erat, ut semper enim eleifend et. Morbi sed massa eu purus finibus tincidunt. </p>
-  <h3>Work Experience</h3>
-  <p>Security Analyst</p>
-  <h3>Education</h3>
-  <p>Arizona State University</p>
-  <h3>Contact</h3>
->
-  <form action="https://formspree.io/me@ericderienzo.com" method="POST" />
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="emailName">Name</label>
-        <input type="text" name-"name" class="form-control" id="emailName" placeholder="Enter name">
+<div class="row justify-content-center">
+  <div class="col-md-8 main-container home-content">
+    <p>I'm a lad residing in Phoenix currently working as a security analyst for Avertium. In my spare time I'm usually drawing, learning web development, or practicing Japanese.</p>
+    <h3>Work & Education</h3>
+    <div class="row">
+      <div class="col-md-6 avertium">
+        <img src="/assets/images/avertium.png" alt="avertium">
+        <h4>Security Analyst</h4>
       </div>
-      <div class="form-group col-md-6">
-        <label for="emailInput">Email address</label>
-        <input type="email" name="_replyto" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+      <div class="col-md-6 asu">
+        <img src="/assets/images/asu.png" alt="asu">
+        <h4>B.S. in Applied Computing, 2018</h4>
+        <p>Arizona State University</p>
       </div>
     </div>
-    <div class="form-group">
-      <label for="emailSubject">Subject</label>
-      <input type="text" name="_subject" class="form-control" id="emailSubject" placeholder="Message Subject">
-    </div>
-    <div class="form-group">
-      <label for="emailText">Message</label>
-      <textarea name="message" class="form-control" id="emailText" cols="30" rows="5" placeholder="Type your message!"></textarea>
-    </div>
-    <input type="hidden" name="_next" value="/blog.html">
-    <button type="submit" class="btn btn-block btn-success">Send</button>
-  </form>
+    <h3>Contact</h3>
+
+    <p> Want to get in touch? Shoot me an email!</p>
+
+    <form action="https://formspree.io/me@ericderienzo.com" method="POST" />
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="emailName">Name</label>
+          <input type="text" name-"name" class="form-control" id="emailName" placeholder="Enter name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="emailInput">Email address</label>
+          <input type="email" name="_replyto" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="emailSubject">Subject</label>
+        <input type="text" name="_subject" class="form-control" id="emailSubject" placeholder="Message Subject">
+      </div>
+      <div class="form-group">
+        <label for="emailText">Message</label>
+        <textarea name="message" class="form-control" id="emailText" cols="30" rows="5" placeholder="Type your message!"></textarea>
+      </div>
+      <input type="hidden" name="_next" value="/blog.html">
+      <button type="submit" class="btn btn-block btn-success">Send</button>
+    </form>
+  </div>
 </div>
+
 
 
     <footer class="container-fluid footer">
