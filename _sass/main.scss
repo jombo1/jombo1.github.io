@@ -52,20 +52,17 @@ a {
   padding-bottom: 10rem;
 }
 
-.post-content, .blog-content {
+.post-content{
   font-family: 'Merriweather', serif;
   pre {
     border-left: 2px solid #999;
     border-bottom: 1px solid #ccc;
     padding: 1rem;
+    background-color: #eee;
   }
 }
 
-.blog-content {
-  h1, h2, h5 {
-    font-family: 'Saira Semi Condensed', sans-serif;
-  }
-}
+
  h1 {
    text-align: center;
  }

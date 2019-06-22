@@ -43,15 +43,13 @@ a {
   text-align: center;
   padding-bottom: 10rem; }
 
-.post-content, .blog-content {
+.post-content {
   font-family: 'Merriweather', serif; }
-  .post-content pre, .blog-content pre {
+  .post-content pre {
     border-left: 2px solid #999;
     border-bottom: 1px solid #ccc;
-    padding: 1rem; }
-
-.blog-content h1, .blog-content h2, .blog-content h5 {
-  font-family: 'Saira Semi Condensed', sans-serif; }
+    padding: 1rem;
+    background-color: #eee; }
 
 h1 {
   text-align: center; }
