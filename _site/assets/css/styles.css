@@ -14,7 +14,6 @@ li {
   width: 5rem; }
 
 #aboutme {
-  font-family: 'Saira Semi Condensed', sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
@@ -26,7 +25,7 @@ li {
   max-width: 50rem;
   padding: 2rem 1rem 1rem; }
   #aboutme a {
-    padding-left: 1rem; }
+    margin-left: 1rem; }
 
 a {
   color: inherit; }
@@ -46,6 +45,10 @@ a {
 
 .post-content, .blog-content {
   font-family: 'Merriweather', serif; }
+  .post-content pre, .blog-content pre {
+    border-left: 2px solid #999;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem; }
 
 .blog-content h1, .blog-content h2, .blog-content h5 {
   font-family: 'Saira Semi Condensed', sans-serif; }
@@ -125,3 +128,7 @@ h3 {
 
 img {
   max-width: 100%; }
+
+.back-button {
+  text-align: right;
+  padding-top: 2rem; }
