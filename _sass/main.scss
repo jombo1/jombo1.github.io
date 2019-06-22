@@ -6,6 +6,7 @@ html, body {
   height: 100%;
   background-color: #eee;
   font-family: 'Saira Semi Condensed', sans-serif;
+  color: #444;
 }
 
 li {
@@ -24,6 +25,23 @@ li {
 .home-content {
   text-align: center;
   padding-bottom: 10rem;
+}
+
+.post-content, .blog-content {
+  font-family: 'Merriweather', serif;
+}
+
+.blog-content {
+  h1, h2, h5 {
+    font-family: 'Saira Semi Condensed', sans-serif;
+  }
+}
+ h1 {
+   text-align: center;
+ }
+
+.row {
+  margin: 0;
 }
 
 form {
@@ -49,6 +67,8 @@ form {
 
 .navbar {
   padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
   .active {
     background-color: #444;
   }

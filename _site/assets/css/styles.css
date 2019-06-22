@@ -3,7 +3,8 @@ html, body {
   margin: 0;
   height: 100%;
   background-color: #eee;
-  font-family: 'Saira Semi Condensed', sans-serif; }
+  font-family: 'Saira Semi Condensed', sans-serif;
+  color: #444; }
 
 li {
   list-style: none; }
@@ -20,6 +21,18 @@ li {
 .home-content {
   text-align: center;
   padding-bottom: 10rem; }
+
+.post-content, .blog-content {
+  font-family: 'Merriweather', serif; }
+
+.blog-content h1, .blog-content h2, .blog-content h5 {
+  font-family: 'Saira Semi Condensed', sans-serif; }
+
+h1 {
+  text-align: center; }
+
+.row {
+  margin: 0; }
 
 form {
   text-align: left; }
@@ -38,7 +51,9 @@ form {
     padding-top: 30vh; }
 
 .navbar {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box; }
   .navbar .active {
     background-color: #444; }
 
