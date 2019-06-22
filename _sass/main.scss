@@ -13,6 +13,32 @@ li {
   list-style: none;
 }
 
+#avatar {
+  border-radius: 50%;
+  width: 5rem;
+}
+
+#aboutme {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: left;
+  align-self: center;
+  border: 1px solid #ccc;
+  border-radius: 0 2rem 0 2rem;
+  max-width: 50rem;
+  padding: 2rem 1rem 1rem;
+  a {
+    padding-left: 1rem;
+  }
+}
+
+a {
+  color: inherit;
+}
+
 .main-container {
   padding: 4.5rem 2rem 2rem 2rem; /* ^>v< */
   background-color: #fff;
