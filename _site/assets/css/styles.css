@@ -44,7 +44,13 @@ a {
   padding-bottom: 10rem; }
 
 .post-content {
-  font-family: 'Merriweather', serif; }
+  font-family: 'Merriweather', serif;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+  .post-content hr {
+    margin-bottom: 4rem; }
+  .post-content h1 {
+    margin-top: 4rem; }
   .post-content pre {
     border-left: 2px solid #999;
     border-bottom: 1px solid #ccc;
