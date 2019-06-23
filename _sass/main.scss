@@ -1,4 +1,16 @@
 
+$dark-shades: #FBF9FA;
+$dark-accent: #8797A9;
+$main-color: #E5543E;
+$light-accent: #9D524C;
+$light-shades: #1A1B23;
+$dark-bg: darken($dark-shades, 5%);
+$ui-primary: #e5543e;
+$ui-info: #1a1b23;
+$ui-success: #7a944b;
+$ui-warning: #f78413;
+$ui-danger: #f44336;
+
 $color-bg: #eee;
 $color-text: #111;
 
@@ -6,14 +18,14 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: 'Saira Semi Condensed', sans-serif;
-  color: #444;
+  color: lighten($light-shades, 20%);
 }
 
 body {
   // background-image: url("/assets/images/backgroundimage.jpg");
   background-repeat: repeat;
   background-size: 100%;
-  background-color: #eee;
+  background-color: $dark-bg;
 }
 
 li {
@@ -25,6 +37,23 @@ li {
   width: 5rem;
 }
 
+.btn-success {
+  background-color: $ui-success;
+  border-color: $ui-success;
+  color: dark-shades;
+  &:hover{
+    background-color: darken($ui-success, 20%);
+    border-color: darken($ui-success, 20%);
+  }
+  &:active{
+    background-color: darken($ui-success, 20%);
+    border-color: darken($ui-success, 20%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 .2rem darken($ui-success, 10%);
+  }
+}
+
 #aboutme {
   margin-left: auto;
   margin-right: auto;
@@ -32,7 +61,7 @@ li {
   margin-bottom: 4rem;
   text-align: left;
   align-self: center;
-  border: 1px solid #ccc;
+  border: 1px solid $dark-accent;
   border-radius: 0 2rem 0 2rem;
   max-width: 50rem;
   padding: 2rem 1rem 1rem;
@@ -41,13 +70,26 @@ li {
   }
 }
 
+.form-control {
+  background-color: $dark-shades;
+  border: 1px solid $dark-accent;
+  &:focus{
+    background-color: $dark-shades;
+    box-shadow: 0 0 0 .2rem darken($dark-accent, 10%);
+    border-color: $dark-accent;
+  }
+}
+
 a {
   color: inherit;
+  &:hover {
+    color: $light-accent;
+  }
 }
 
 .main-container {
   padding: 4.5rem 2rem 2rem 2rem; /* ^>v< */
-  background-color: #fff;
+  background-color: $dark-shades;
   font-size: 1rem;
   margin: 0 auto;
   line-height: 1.5;
@@ -74,11 +116,26 @@ a {
     margin-top: 4rem;
   }
   pre {
-    border-left: 2px solid #999;
-    border-bottom: 1px solid #ccc;
+    border-left: 2px solid $dark-accent;
+    border-bottom: 1px solid lighten($dark-accent, 20%);
     padding: 1rem;
-    background-color: #eee;
+    background-color: darken($dark-shades, 5%);
   }
+  img {
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: .25rem;
+    border: 1px solid $dark-accent;
+    border-radius: .5rem;
+  }
+  a {
+    color: $light-accent;
+  }
+}
+
+.post-date {
+  color: lighten($light-shades, 40%);
 }
 
 
@@ -116,12 +173,12 @@ form {
   width: 100%;
   box-sizing: border-box;
   .active {
-    background-color: #444;
+    background-color: $main-color;
   }
 }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-    color: #fff;
+    color: $dark-shades;
 }
 
 .navbar-toggler {
@@ -138,14 +195,15 @@ form {
 footer{
   a {
     display: inline;
-    color: #ddd;
+    color: $dark-shades;
+    margin: 0 .5rem;
   }
   position: absolute;
   bottom: 0;
   text-align: center;
   padding: 5rem;
-  color: #ddd;
-  background-color: #333;
+  color: $dark-shades;
+  background-color: $light-shades;
 }
 .avertium, .asu {
   img{
@@ -159,7 +217,7 @@ footer{
 
 hr {
   border: none;
-  background-color: navy;
+  background-color: $main-color;
   height: 5px;
   max-width: 50px
 }

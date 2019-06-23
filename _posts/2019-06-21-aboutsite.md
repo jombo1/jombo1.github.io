@@ -2,11 +2,12 @@
 author: Eric
 title: "A Little Bit About This Site..."
 ---
-Here's some information about my site! 
-- This site is powered by **Jekyll** and hosted on GitHub Pages. 
-- The theme is a *heavily* customized variation of the basic Bootstrap 4 light theme. 
-- The font used for most of this website is Saira Semi Condensed. 
-- I like to use VS Code, it's a very nice editor!
+As an introduction to having the website up, Here's some information about this site! 
+
+- This site is powered by [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages. 
+- This site uses Bootstrap 4 but is heavily customizedi (by me). 
+- The font used for most of this website is *Saira Semi Condensed*. The blog section uses *Merriweather*. 
+- I like to use VS Code. See below for the screenshot!
 
 ```css
 html, body {
@@ -18,4 +19,6 @@ html, body {
 ```
 
 ## Check this out!!
-![Screenshot](/assets/images/screeny.png "Screenshot")
+[![Screenshot](/assets/images/screeny.png "Screenshot")](/assets/images/screeny.png)
+
+More posts to come!
