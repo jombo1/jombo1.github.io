@@ -1,12 +1,19 @@
+
 $color-bg: #eee;
 $color-text: #111;
 
 html, body {
   margin: 0;
   height: 100%;
-  background-color: #eee;
   font-family: 'Saira Semi Condensed', sans-serif;
   color: #444;
+}
+
+body {
+  // background-image: url("/assets/images/backgroundimage.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-color: #eee;
 }
 
 li {
@@ -53,7 +60,11 @@ a {
 }
 
 .post-content{
-  font-family: 'Merriweather', serif;
+ font-family: 'Merriweather', serif;
+  li {
+    display: list-item;
+    list-style-type: circle;
+  }
   margin-left: 2rem;
   margin-right: 2rem;
   hr {

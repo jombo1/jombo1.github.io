@@ -15,8 +15,8 @@ title: blog
         <h5><i>Posted {{ post.date | date_to_string }}</i></h5>
         <div class="post-content">
           <p>{{ post.excerpt }}</p>
-          <p><u><a href="{{ post.url }}">Read more...</a></u></p>
         </div>
+        <p><u><a href="{{ post.url }}">Read more...</a></u></p>
       </li>
       <br />
       {% endfor %}
@@ -29,7 +29,7 @@ title: blog
           << Previous
         </a>
       {% else %}
-        <span class="previous"><< Previous</span>
+        <span class="previous" style="visibility: hidden"><< Previous</span>
       {% endif %}
 
       <span class="page_number">

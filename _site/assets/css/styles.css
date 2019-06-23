@@ -2,9 +2,13 @@
 html, body {
   margin: 0;
   height: 100%;
-  background-color: #eee;
   font-family: 'Saira Semi Condensed', sans-serif;
   color: #444; }
+
+body {
+  background-repeat: repeat;
+  background-size: 100%;
+  background-color: #eee; }
 
 li {
   list-style: none; }
@@ -47,6 +51,9 @@ a {
   font-family: 'Merriweather', serif;
   margin-left: 2rem;
   margin-right: 2rem; }
+  .post-content li {
+    display: list-item;
+    list-style-type: circle; }
   .post-content hr {
     margin-bottom: 4rem; }
   .post-content h1 {
