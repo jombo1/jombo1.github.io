@@ -173,3 +173,15 @@ img {
   text-align: right;
   padding-top: 2rem;
 }
+
+.pagination {
+  margin-bottom: 3rem;
+  .previous {
+    position: absolute;
+    left: 20%;
+  }
+  .next {
+    position: absolute;
+    right: 20%;
+  }
+}
