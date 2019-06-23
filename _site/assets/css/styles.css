@@ -43,6 +43,8 @@ li {
   padding: 2rem 1rem 1rem; }
   #aboutme a {
     margin-left: 1rem; }
+  #aboutme h6 {
+    color: #9D524C; }
 
 .form-control {
   background-color: #FBF9FA;
@@ -117,7 +119,8 @@ form {
   background-color: #aaa;
   margin: 0;
   background-image: url("../images/jumbotron_bg.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .jumbotron .intro {
     padding-top: 30vh; }
 
@@ -171,7 +174,8 @@ h3 {
   color: #fff;
   text-shadow: 1px 1px #111; }
   .intro h1 {
-    text-shadow: 2px 2px #111; }
+    text-shadow: 2px 2px #111;
+    font-size: 4rem; }
 
 img {
   max-width: 100%; }

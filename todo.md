@@ -1,6 +1,12 @@
 # TODO:
-- change color style
-- finish blog styling
 - add projects (page maybe)
-- launch
 - add homepage animation thingy
+- logo
+- favicon
+- full resume
+- launch
+
+possible topics:
+- vimrc
+- manjaro ricing
+- drawings

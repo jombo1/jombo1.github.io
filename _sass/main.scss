@@ -68,6 +68,9 @@ li {
   a {
     margin-left: 1rem;
   }
+  h6 {
+    color: $light-accent;
+  }
 }
 
 .form-control {
@@ -166,6 +169,7 @@ form {
   margin: 0;
   background-image: url("../images/jumbotron_bg.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .navbar {
@@ -231,6 +235,7 @@ h3 {
   text-shadow: 1px 1px #111;
   h1 {
     text-shadow: 2px 2px #111;
+    font-size: 4rem;
   }
 }
 
