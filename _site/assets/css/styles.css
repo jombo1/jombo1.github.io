@@ -216,3 +216,9 @@ img {
   margin: 1rem; }
 .projects .col-lg-4 {
   margin: 2rem 0; }
+
+.navbar-brand {
+  margin-right: 90px !important; }
+
+input::-moz-focus-inner {
+  border: 0; }
