@@ -42,7 +42,8 @@ li {
   max-width: 50rem;
   padding: 2rem 1rem 1rem; }
   #aboutme a {
-    margin-left: 1rem; }
+    margin-left: 1rem;
+    color: #45485e; }
   #aboutme h6 {
     color: #9D524C; }
 
@@ -214,4 +215,4 @@ img {
 .projects a {
   margin: 1rem; }
 .projects .col-lg-4 {
-  margin-bottom: 2rem; }
+  margin: 2rem 0; }
