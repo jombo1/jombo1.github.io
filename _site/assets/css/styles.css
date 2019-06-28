@@ -22,8 +22,8 @@ li {
   border-color: #7a944b;
   color: dark-shades; }
   .btn-success:hover {
-    background-color: #425029;
-    border-color: #425029; }
+    background-color: #abc184;
+    border-color: #abc184; }
   .btn-success:active {
     background-color: #425029;
     border-color: #425029; }
@@ -71,6 +71,11 @@ a {
 .home-content {
   text-align: center;
   padding-bottom: 10rem; }
+  .home-content li {
+    display: list-item;
+    list-style-type: circle; }
+  .home-content a {
+    color: #9D524C; }
 
 .post-content {
   font-family: 'Merriweather', serif;
@@ -125,11 +130,22 @@ form {
     padding-top: 30vh; }
 
 .navbar {
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
   padding: 0 1rem;
   width: 100%;
   box-sizing: border-box; }
   .navbar .active {
     background-color: #E5543E; }
+
+.navbar.scrolled {
+  background: #444444;
+  /* IE */
+  background: rgba(0, 0, 0, 0.78);
+  /* NON-IE */ }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
   color: #FBF9FA; }
@@ -192,3 +208,10 @@ img {
   .pagination .next {
     position: absolute;
     right: 20%; }
+
+.projects h4 {
+  margin: 1rem 0; }
+.projects a {
+  margin: 1rem; }
+.projects .col-lg-4 {
+  margin-bottom: 2rem; }
