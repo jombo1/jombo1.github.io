@@ -1,9 +1,9 @@
 ---
 title: blog
 ---
+
 <div class="row justify-content-center">
   <div class="col-md-8 main-container blog-content">
-    
     <h1>Latest Posts</h1>
     <hr />
 
@@ -11,25 +11,28 @@ title: blog
       {% for post in paginator.posts %}
       <li>
         <br />
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
         <h5 class="post-date">Posted {{ post.date | date_to_string }}</h5>
         <div class="post-content">
           <p>{{ post.excerpt }}</p>
         </div>
-        <p><u><a href="{{ post.url }}">View post</a></u></p>
+        <p>
+          <u><a href="{{ post.url }}">View post</a></u>
+        </p>
       </li>
       <br />
       {% endfor %}
     </ul>
 
     <div class="pagination justify-content-center">
-
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous">
-          << Previous
-        </a>
+      <a href="{{ paginator.previous_page_path }}" class="previous">
+        << Previous
+      </a>
       {% else %}
-        <span class="previous" style="visibility: hidden"><< Previous</span>
+      <span class="previous" style="visibility: hidden"><< Previous</span>
       {% endif %}
 
       <span class="page_number">
@@ -37,14 +40,12 @@ title: blog
       </span>
 
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">
-          Next >>
-        </a>
+      <a href="{{ paginator.next_page_path }}" class="next">
+        Next >>
+      </a>
       {% else %}
-        <span class="next" style="visibility: hidden;">Next >></span>
+      <span class="next" style="visibility: hidden;">Next >></span>
       {% endif %}
-
     </div>
   </div>
 </div>
-

@@ -226,7 +226,7 @@ footer{
   bottom: 0;
   text-align: center;
   padding: 5rem;
-  color: $dark-shades;
+  color: darken($dark-shades, 50%);
   background-color: $light-shades;
 }
 .avertium, .asu {
@@ -301,3 +301,38 @@ img {
 input::-moz-focus-inner { 
   border: 0; 
 }
+
+
+
+/* Share buttons */
+.sharebuttons {
+  margin: 0 auto 0 auto;
+  text-decoration: none;
+  text-align: right;
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .reddit svg {
+    fill: #FF4500;
+  }
+  .googleplus svg {
+    fill: #DC4E41;
+  }
+  .twitter svg {
+    fill: #1DA1F2;
+  }
+  .linkedin svg {
+    fill: #0077B5;
+  }
+  .facebook svg {
+    fill: #4172B8;
+  }
+  * {
+    display: inline;
+  }
+  .sharetitle {
+    display: block;
+  }
+}
+
