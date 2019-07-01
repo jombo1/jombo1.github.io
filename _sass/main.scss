@@ -181,11 +181,6 @@ form {
 }
 
 .navbar {
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
-  -ms-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
   padding: 0 1rem;
   width: 100%;
   box-sizing: border-box;
@@ -194,12 +189,6 @@ form {
   }
 }
 
-.navbar {
-  &.scrolled {
-    background: rgb(68, 68, 68); /* IE */
-    background: rgba(0, 0, 0, 0.78); /* NON-IE */
-  }
-}
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
     color: $dark-shades;
@@ -343,3 +332,11 @@ input::-moz-focus-inner {
   }
 }
 
+
+.fixed-top{
+  background-color: rgba(255,255,255,.3);
+  &.scrolled {
+    background-color: $dark-shades !important;
+    transition: background-color 200ms linear;
+  }
+}
