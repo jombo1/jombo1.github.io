@@ -209,6 +209,13 @@ form {
   border: none;
 }
 
+.navbar-nav {
+  .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .wrapper {
   box-sizing: border-box;
   position: relative;

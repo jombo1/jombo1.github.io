@@ -58,6 +58,8 @@ form { text-align: left; }
 
 .navbar-toggler { border: none; }
 
+.navbar-nav .nav-link { padding-left: 1rem; padding-right: 1rem; }
+
 .wrapper { box-sizing: border-box; position: relative; padding-bottom: 12.5rem; min-height: 100%; }
 
 footer { position: absolute; bottom: 0; text-align: center; padding: 5rem; color: #93627b; background-color: #1A1B23; }
