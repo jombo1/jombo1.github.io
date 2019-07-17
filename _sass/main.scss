@@ -132,6 +132,10 @@ a {
     padding: 1rem;
     background-color: darken($dark-shades, 5%);
   }
+  code {
+    background-color: darken($dark-shades, 5%);
+    color: #212529;
+  }
   img {
     max-width: 90%;
     display: block;

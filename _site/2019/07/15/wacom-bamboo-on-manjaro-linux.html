@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Little Bit About This Site...</title>
+  <title>Configuring Wacom Tablets on Manjaro i3 Linux</title>
   <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Merriweather&display=swap" rel="stylesheet"> 
@@ -11,20 +11,20 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="NEWsite" />
   <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>A Little Bit About This Site… | NEWsite</title>
+<title>Configuring Wacom Tablets on Manjaro i3 Linux | NEWsite</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="A Little Bit About This Site…" />
+<meta property="og:title" content="Configuring Wacom Tablets on Manjaro i3 Linux" />
 <meta name="author" content="Eric" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="As an introduction to having the website up, here’s some information about this site!" />
-<meta property="og:description" content="As an introduction to having the website up, here’s some information about this site!" />
-<link rel="canonical" href="http://localhost:4000/2019/06/21/aboutsite.html" />
-<meta property="og:url" content="http://localhost:4000/2019/06/21/aboutsite.html" />
+<meta name="description" content="For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going." />
+<meta property="og:description" content="For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going." />
+<link rel="canonical" href="http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html" />
+<meta property="og:url" content="http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html" />
 <meta property="og:site_name" content="NEWsite" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-06-21T00:00:00-07:00" />
+<meta property="article:published_time" content="2019-07-15T00:00:00-07:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Eric"},"description":"As an introduction to having the website up, here’s some information about this site!","@type":"BlogPosting","dateModified":"2019-06-21T00:00:00-07:00","datePublished":"2019-06-21T00:00:00-07:00","headline":"A Little Bit About This Site…","url":"http://localhost:4000/2019/06/21/aboutsite.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/21/aboutsite.html"},"@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Eric"},"description":"For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going.","@type":"BlogPosting","dateModified":"2019-07-15T00:00:00-07:00","datePublished":"2019-07-15T00:00:00-07:00","headline":"Configuring Wacom Tablets on Manjaro i3 Linux","url":"http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -70,35 +70,53 @@
     <div class="row justify-content-center">
   <div class="col-md-8 main-container">
     <div class="post-content">
-      <h1>A Little Bit About This Site...</h1>
+      <h1>Configuring Wacom Tablets on Manjaro i3 Linux</h1>
       <hr />
 
-      <p>As an introduction to having the website up, here’s some information about this site!</p>
+      <p>For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going.</p>
 
-<ul>
-  <li>This site is powered by <a href="https://jekyllrb.com/">Jekyll</a> and hosted on GitHub Pages.</li>
-  <li>This site uses a heavily customized Bootstrap 4 theme. Might upload later.</li>
-  <li>The font used for most of this website is <em>Saira Semi Condensed</em>. The blog section uses <em>Merriweather</em>.</li>
-  <li>I like to use VS Code.</li>
-</ul>
+<p>In this guide I will be using a Bamboo Pen CTL-460 on Manjaro i3 and Krita as the drawing software.</p>
+<h4 id="configuring-the-wacom-tablet">Configuring the Wacom tablet</h4>
+<p>Wacom tablets are configured using <code class="highlighter-rouge">xsetwacom</code>, which you get can get by installing <a href="https://www.archlinux.org/packages/extra/x86_64/xf86-input-wacom/">xf86-input-wacom</a>. You may need to restart your computer for it to work. To make sure your tablet is plugged in and recognized open the terminal and run</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xsetwacom <span class="nt">--list</span> devices
+</code></pre></div></div>
+<p>Your output should look something like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Wacom Bamboo Pen Pen stylus     	id: 8	  type: STYLUS    
+Wacom Bamboo Pen Pen eraser     	id: 14	type: ERASER  
+</code></pre></div></div>
+<p>Here we see the name of the devices, the id, and the types <code class="highlighter-rouge">STYLUS</code> and <code class="highlighter-rouge">ERASER</code>. Both will need to be configured to get the pen working properly.</p>
 
-<h4 id="heres-a-screenshot-of-my-development-environment">Here’s a screenshot of my development environment:</h4>
-<p><a href="/assets/images/screeny.png"><img src="/assets/images/screeny.png" alt="Screenshot" title="Screenshot" /></a></p>
+<p>For those with dual monitor setups you’ll want to confine your tablet area to a single monitor. You can do this by entering</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xsetwacom set "[name]" MapToOutput [monitor]
+</code></pre></div></div>
+<p>For example, my commands were</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xsetwacom set "Wacom Bamboo Pen Pen stylus" MapToOutput DVI-0
+xsetwacom set "Wacom Bamboo Pen Pen eraser" MapToOutput DVI-0
+</code></pre></div></div>
+<p>If you don’t know your monitors’ names, use <code class="highlighter-rouge">xrandr</code> to find out.</p>
 
-<p>More posts to come!</p>
+<p>Whatever settings you make won’t persist upon restart, so I recommend creating a shell script with all your configurations, then adding it to <code class="highlighter-rouge">~/.xprofile</code> or whatever your autostart script is. In my case I just put the above 2 configuration lines in a file called <code class="highlighter-rouge">setwacom.sh</code>, then set execute permissions on the script with <code class="highlighter-rouge">chmod u+x ~/setwacom.sh</code> and then added “<code class="highlighter-rouge">~/setwacom.sh &amp;</code>” to the file <code class="highlighter-rouge">~/.xprofile</code> (I had to create this file since it’s not there by default).</p>
+
+<p>Use <code class="highlighter-rouge">xsetwacom get [id] all</code> to list all configurable settings for that device.</p>
+
+<p>For more information on configuring your tablet see the <a href="https://wiki.archlinux.org/index.php/Wacom_tablet">Arch Wiki article</a> on it.</p>
+
+<p>The next article will be about how I set up Krita for digital painting.</p>
+
+<p><a href="/assets/images/drawing.png"><img src="/assets/images/drawing.png" alt="Krita Drawing" title="Krita Drawing" /></a></p>
 
 
       <hr />
     </div>
 
-    <h5>Posted 21 Jun 2019</h5>
+    <h5>Posted 15 Jul 2019</h5>
 
     <div class="sharebuttons">
     <div>
       <h5 class="sharetitle">Share this:</h5>
     </div>
     <div class="reddit">
-      <a href="http://www.reddit.com/submit?url=http://localhost:4000/2019/06/21/aboutsite.html&title=A%20Little%20Bit%20About%20This%20Site..." 
+      <a href="http://www.reddit.com/submit?url=http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html&title=Configuring%20Wacom%20Tablets%20on%20Manjaro%20i3%20Linux" 
         rel="nofollow" 
         target="_blank"
         title="Share on Reddit">
@@ -106,14 +124,14 @@
       </a>
     </div>
     <div class="googleplus">
-      <a href="https://plus.google.com/share?url=http://localhost:4000/2019/06/21/aboutsite.html" 
+      <a href="https://plus.google.com/share?url=http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html" 
         rel="nofollow" target="_blank" 
         title="Share on Google+">
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google+ icon</title><path d="M7.635 10.909v2.619h4.335c-.173 1.125-1.31 3.295-4.331 3.295-2.604 0-4.731-2.16-4.731-4.823 0-2.662 2.122-4.822 4.728-4.822 1.485 0 2.479.633 3.045 1.178l2.073-1.994c-1.33-1.245-3.056-1.995-5.115-1.995C3.412 4.365 0 7.785 0 12s3.414 7.635 7.635 7.635c4.41 0 7.332-3.098 7.332-7.461 0-.501-.054-.885-.12-1.265H7.635zm16.365 0h-2.183V8.726h-2.183v2.183h-2.182v2.181h2.184v2.184h2.189V13.09H24"/></svg>
       </a>
     </div>
     <div class="twitter">
-      <a href="https://twitter.com/intent/tweet?via=jombo&url=http://localhost:4000/2019/06/21/aboutsite.html&text=A%20Little%20Bit%20About%20This%20Site..." 
+      <a href="https://twitter.com/intent/tweet?via=jombo&url=http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html&text=Configuring%20Wacom%20Tablets%20on%20Manjaro%20i3%20Linux" 
         rel="nofollow" 
         target="_blank"
         title="Share on Twitter">
@@ -121,7 +139,7 @@
       </a>
     </div>
     <div class="linkedin">
-      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019/06/21/aboutsite.html&title=A%20Little%20Bit%20About%20This%20Site..." 
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html&title=Configuring%20Wacom%20Tablets%20on%20Manjaro%20i3%20Linux" 
         rel="nofollow" 
         target="_blank"
         title="Share on LinkedIn">
@@ -129,7 +147,7 @@
       </a>
     </div>
     <div class="facebook">
-      <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2019/06/21/aboutsite.html" 
+      <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html" 
         rel="nofollow" 
         target="_blank" 
         title="Share on Facebook">

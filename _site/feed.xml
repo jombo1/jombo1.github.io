@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-01T20:44:26-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">NEWsite</title><subtitle>spankin new</subtitle><entry><title type="html">A Little Bit About This Site…</title><link href="http://localhost:4000/2019/06/21/aboutsite.html" rel="alternate" type="text/html" title="A Little Bit About This Site..." /><published>2019-06-21T00:00:00-07:00</published><updated>2019-06-21T00:00:00-07:00</updated><id>http://localhost:4000/2019/06/21/aboutsite</id><content type="html" xml:base="http://localhost:4000/2019/06/21/aboutsite.html">&lt;p&gt;As an introduction to having the website up, here’s some information about this site!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-16T20:33:11-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">NEWsite</title><subtitle>Webpage of Eric DeRienzo</subtitle><entry><title type="html">Configuring Wacom Tablets on Manjaro i3 Linux</title><link href="http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html" rel="alternate" type="text/html" title="Configuring Wacom Tablets on Manjaro i3 Linux" /><published>2019-07-15T00:00:00-07:00</published><updated>2019-07-15T00:00:00-07:00</updated><id>http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux</id><content type="html" xml:base="http://localhost:4000/2019/07/15/wacom-bamboo-on-manjaro-linux.html">&lt;p&gt;For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going.&lt;/p&gt;
+
+&lt;p&gt;In this guide I will be using a Bamboo Pen CTL-460 on Manjaro i3 and Krita as the drawing software.&lt;/p&gt;
+&lt;h4 id=&quot;configuring-the-wacom-tablet&quot;&gt;Configuring the Wacom tablet&lt;/h4&gt;
+&lt;p&gt;Wacom tablets are configured using &lt;code class=&quot;highlighter-rouge&quot;&gt;xsetwacom&lt;/code&gt;, which you get can get by installing &lt;a href=&quot;https://www.archlinux.org/packages/extra/x86_64/xf86-input-wacom/&quot;&gt;xf86-input-wacom&lt;/a&gt;. You may need to restart your computer for it to work. To make sure your tablet is plugged in and recognized open the terminal and run&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xsetwacom &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt; devices
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Your output should look something like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Wacom Bamboo Pen Pen stylus     	id: 8	  type: STYLUS    
+Wacom Bamboo Pen Pen eraser     	id: 14	type: ERASER  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Here we see the name of the devices, the id, and the types &lt;code class=&quot;highlighter-rouge&quot;&gt;STYLUS&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;ERASER&lt;/code&gt;. Both will need to be configured to get the pen working properly.&lt;/p&gt;
+
+&lt;p&gt;For those with dual monitor setups you’ll want to confine your tablet area to a single monitor. You can do this by entering&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xsetwacom set &quot;[name]&quot; MapToOutput [monitor]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;For example, my commands were&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xsetwacom set &quot;Wacom Bamboo Pen Pen stylus&quot; MapToOutput DVI-0
+xsetwacom set &quot;Wacom Bamboo Pen Pen eraser&quot; MapToOutput DVI-0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If you don’t know your monitors’ names, use &lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr&lt;/code&gt; to find out.&lt;/p&gt;
+
+&lt;p&gt;Whatever settings you make won’t persist upon restart, so I recommend creating a shell script with all your configurations, then adding it to &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.xprofile&lt;/code&gt; or whatever your autostart script is. In my case I just put the above 2 configuration lines in a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;setwacom.sh&lt;/code&gt;, then set execute permissions on the script with &lt;code class=&quot;highlighter-rouge&quot;&gt;chmod u+x ~/setwacom.sh&lt;/code&gt; and then added “&lt;code class=&quot;highlighter-rouge&quot;&gt;~/setwacom.sh &amp;amp;&lt;/code&gt;” to the file &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.xprofile&lt;/code&gt; (I had to create this file since it’s not there by default).&lt;/p&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;xsetwacom get [id] all&lt;/code&gt; to list all configurable settings for that device.&lt;/p&gt;
+
+&lt;p&gt;For more information on configuring your tablet see the &lt;a href=&quot;https://wiki.archlinux.org/index.php/Wacom_tablet&quot;&gt;Arch Wiki article&lt;/a&gt; on it.&lt;/p&gt;
+
+&lt;p&gt;The next article will be about how I set up Krita for digital painting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/images/drawing.png&quot;&gt;&lt;img src=&quot;/assets/images/drawing.png&quot; alt=&quot;Krita Drawing&quot; title=&quot;Krita Drawing&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Eric</name></author><summary type="html">For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going.</summary></entry><entry><title type="html">A Little Bit About This Site…</title><link href="http://localhost:4000/2019/06/21/aboutsite.html" rel="alternate" type="text/html" title="A Little Bit About This Site..." /><published>2019-06-21T00:00:00-07:00</published><updated>2019-06-21T00:00:00-07:00</updated><id>http://localhost:4000/2019/06/21/aboutsite</id><content type="html" xml:base="http://localhost:4000/2019/06/21/aboutsite.html">&lt;p&gt;As an introduction to having the website up, here’s some information about this site!&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;This site is powered by &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and hosted on GitHub Pages.&lt;/li&gt;
