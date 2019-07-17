@@ -2,7 +2,7 @@
 author: Eric
 title: "Configuring Wacom Tablets on Manjaro i3 Linux"
 ---
-For anyone who loves digital painting and Linux, it can be quite disheartening knowing neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going.
+For anyone who loves digital painting and Linux, it can be quite disheartening to know neither Wacom or Adobe have official Linux support. Fear not however, with just a little bit of configuration you can have the perfect setup going.
 
 In this guide I will be using a Bamboo Pen CTL-460 on Manjaro i3 and Krita as the drawing software.
 #### Configuring the Wacom tablet
