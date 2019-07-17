@@ -1,4 +1,5 @@
 /* @import "reset"; */
+@import url(highlighting_default.css);
 html, body { margin: 0; height: 100%; font-family: 'Saira Semi Condensed', sans-serif; color: #45485e; }
 
 body { background-repeat: repeat; background-size: 100%; background-color: #f1eaed; }

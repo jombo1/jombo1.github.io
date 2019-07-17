@@ -22,7 +22,7 @@ For those with dual monitor setups you'll want to confine your tablet area to a 
 xsetwacom set "[name]" MapToOutput [monitor]
 ```
 For example, my commands were
-```
+```bash
 xsetwacom set "Wacom Bamboo Pen Pen stylus" MapToOutput DVI-0
 xsetwacom set "Wacom Bamboo Pen Pen eraser" MapToOutput DVI-0
 ```
