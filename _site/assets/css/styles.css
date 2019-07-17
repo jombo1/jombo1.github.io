@@ -50,6 +50,8 @@ form { text-align: left; }
 .jumbotron { text-align: center; height: 100vh; background-color: #aaa; margin: 0; background-image: url("../images/jumbotron_bg.jpg"); background-size: cover; background-position: center; }
 .jumbotron .intro { padding-top: 30vh; }
 
+.page-not-found { padding-top: 30vh; text-align: center; }
+
 .navbar { padding: 0 1rem; width: 100%; box-sizing: border-box; }
 .navbar .active { background-color: #E5543E; }
 
