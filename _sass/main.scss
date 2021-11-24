@@ -183,6 +183,7 @@ a {
   }
   code {
     background-color: lighten($dark-shades, 5%);
+    padding: 0.2rem 0 0.2rem 0;
     color: $light-shades;
   }
   img {
@@ -222,7 +223,7 @@ form {
 
 .jumbotron {
   .intro {
-    padding-top: 30vh;
+    padding-top: 20vh;
   }
   text-align: center;
   height: 100vh;
@@ -273,6 +274,10 @@ form {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.navbar-light .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
 }
 
 .wrapper {
@@ -360,7 +365,7 @@ img {
 
 .navbar-brand {
   
-  margin-right: 90px !important;
+  margin-right: 40px !important;
 
 }
 
