@@ -6,98 +6,11 @@ header-img: "assets/images/jumbotron_bg.jpg"
 <div class="jumbotron jumbotron-fluid justify-content-center">
   <div class="intro">
     <h1>Hello, I'm Eric.</h1>
-    <p>You've just landed on my personal webpage!</p>
+    <h5>Welcome to my personal webpage.</h5>
+    <p><a href="/blog">Blog</a>・<a href="/assets/eric_derienzo_resume.pdf">Resume</a>・<a href="/contact">Contact</a></p>
+    
+    <div class="front-aboutme">
+      {% include aboutme.html %}
+    </div>
   </div>
 </div>
-
-<div class="row justify-content-center">
-  <div class="col-md-8 main-container home-content">
-    {% include aboutme.html %}
-    
-    <h3>Work & Education</h3>
-    <hr />
-    <div class="row">
-      <div class="col-lg-6 avertium">
-        <img src="/assets/images/avertium.png" alt="avertium">
-        <h4>Security Admin</h4>
-        <p>I detect, investigate, and respond to cyber attacks and vulnerabilities within various companies.</p>
-      </div>
-      <div class="col-lg-6 asu">
-        <img src="/assets/images/asu.png" alt="asu">
-        <h4>B.S. in Applied Computing, 2018</h4>
-        <p>New College of Interdisciplinary Arts & Sciences, <br> Arizona State University West</p>
-      </div>
-    </div>
-
-    <h3>Projects</h3>
-    <hr />
-    
-
-    <div class="row projects">
-      <div class="col-lg-4">
-        <img src="assets/images/projects_sft.jpg" alt="Secure File Transmission">
-        <h4>Secure File Transmission</h4>
-        <p>A tool that allows secure communication between two users through AES-128-CBC encryption. Uses Java's cryptographic API.</p>
-        <a href="assets/projects/secure_file_transmission.zip"><i class="fa fa-folder-open"></i> View Source</a>
-      </div>
-      <div class="col-lg-4">
-        <img src="assets/images/projects_fakenews.jpg" alt="Analysis of Fake News">
-        <h4>Analysis of the Impact of Fake News on Twitter
-        </h4>
-        <p>A webscraping project that collected tweet data from various news sources using Python and BeautifulSoup 4.</p>
-        <a href="assets/projects/research_proj.zip"><i class="fa fa-folder-open"></i> View Source</a>
-      </div>
-      <div class="col-lg-4">
-        <img src="assets/images/projects_yelpcamp.png" alt="YelpCamp">
-        <h4>YelpCamp</h4>
-        <p>A basic camp portfolio made with Express.js and MongoDB. Uses RESTful routes and supports user registration, commenting, and flash messages.</p>
-        <a href="assets/projects/wdb_yelpcamp.zip"><i class="fa fa-folder-open"></i> View Source</a>
-        <a href="https://still-tor-66309.herokuapp.com/"><i class="fa fa-desktop"></i> Demo</a>
-      </div>
-    </div>
-
-
-    <h3>Technical Skills</h3>
-    <hr />
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <strong>Programming Languages:</strong> Python, Javascript, Java <br />
-      </div>
-    </div>
-
-    <h3>Contact</h3>
-    <hr />
-
-    <p> Want to get in touch? Shoot me an email!</p>
-
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <form action="https://formspree.io/me@ericderienzo.com" method="POST" />
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="emailName">Name</label>
-              <input type="text" name-"name" class="form-control" id="emailName" placeholder="Enter name">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="emailInput">Email address</label>
-              <input type="email" name="_replyto" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="emailSubject">Subject</label>
-            <input type="text" name="_subject" class="form-control" id="emailSubject" placeholder="Enter subject">
-          </div>
-          <div class="form-group">
-            <label for="emailText">Message</label>
-            <textarea name="message" class="form-control" id="emailText" cols="30" rows="5" placeholder="Type your message!"></textarea>
-          </div>
-          <input type="hidden" name="_next" value="/blog.html">
-          <button type="submit" class="btn btn-block btn-success">Send</button>
-        </form>
-      </div>
-    </div>
-        
-  </div>
-</div>
-
-

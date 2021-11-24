@@ -13,15 +13,17 @@ layout: default
       <hr />
     </div>
 
-    <h5>Posted {{ page.date | date_to_string }}</h5>
+    <h4 class="post-content-date">Posted on {{ page.date | date: "%B" }} {{ page.date | date: "%d" | plus:'0' }}, {{ page.date | date: "%Y" }}</h4>
 
-    {% include share-buttons.html %}
-
-    <div class="back-button">
-      <p><a href="/blog"><< Back to blog page</a></p>
-    </div>
+    <!-- {% include share-buttons.html %} -->
 
     {% include aboutme.html %}
+
+    <div class="back-button">
+      <p><a href="/blog"><< Back to posts</a></p>
+    </div>
+
+
 
   </div>
 </div>

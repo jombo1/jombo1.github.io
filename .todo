@@ -1,10 +1,27 @@
 # TODO:
-- full resume
 - fix share buttons
-- add source code
-- go to top button
+- fix forms
+- submit new blog post
+- go to top button ??
 
 possible topics:
 - vimrc
 - manjaro ricing
-- drawings
+- japanese linux setup
+
+
+<a href="https://www.youtube.com/user/jomboeric386"><i class="fa fa-youtube"></i></a>
+<a href="https://twitter.com/jombo"><i class="fa fa-twitter"></i></a>
+
+
+$dark-shades: #FBF9FA;
+$dark-accent: #8797A9;
+$main-color: #E5543E;
+$light-accent: #9D524C;
+$light-shades: #1A1B23;
+$dark-bg: darken($dark-shades, 5%);
+$ui-primary: #e5543e;
+$ui-info: #1a1b23;
+$ui-success: #7a944b;
+$ui-warning: #f78413;
+$ui-danger: #f44336;

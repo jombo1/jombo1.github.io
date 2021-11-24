@@ -1,20 +1,11 @@
 <div class="sharebuttons">
-    <div>
-      <h5 class="sharetitle">Share this:</h5>
-    </div>
+      <h5 class="sharetitle">Share this post:</h5>
     <div class="reddit">
       <a href="http://www.reddit.com/submit?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | uri_escape}}&title={{ page.title | default:"" | uri_escape }}" 
         rel="nofollow" 
         target="_blank"
         title="Share on Reddit">
         {% include social/reddit.svg %}
-      </a>
-    </div>
-    <div class="googleplus">
-      <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" 
-        rel="nofollow" target="_blank" 
-        title="Share on Google+">
-        {% include social/googleplus.svg %}
       </a>
     </div>
     <div class="twitter">
@@ -33,12 +24,8 @@
         {% include social/linkedin.svg %}
       </a>
     </div>
-    <div class="facebook">
-      <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" 
-        rel="nofollow" 
-        target="_blank" 
-        title="Share on Facebook">
-        {% include social/facebook.svg %}
-      </a>
-    </div>
+
+    
 </div>
+
+

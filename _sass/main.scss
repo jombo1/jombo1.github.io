@@ -1,15 +1,15 @@
 @import url(highlighting_default.css);
 
-$dark-shades: #FBF9FA;
-$dark-accent: #8797A9;
-$main-color: #E5543E;
-$light-accent: #9D524C;
-$light-shades: #1A1B23;
+$dark-shades: #2D2C36;
+$dark-accent: #D18141;
+$main-color: #BD2626;
+$light-accent: #807E80;
+$light-shades: #E5E4E0;
 $dark-bg: darken($dark-shades, 5%);
-$ui-primary: #e5543e;
-$ui-info: #1a1b23;
-$ui-success: #7a944b;
-$ui-warning: #f78413;
+$ui-primary: #be2b28;
+$ui-info: #2d2c36;
+$ui-success: #6e8744;
+$ui-warning: #ec770c;
 $ui-danger: #f44336;
 
 $color-bg: #eee;
@@ -19,7 +19,7 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: 'Saira Semi Condensed', sans-serif;
-  color: lighten($light-shades, 20%);
+  color: darken($light-shades, 10%);
 }
 
 body {
@@ -55,6 +55,44 @@ li {
   }
 }
 
+.btn-primary {
+  background-color: $ui-primary;
+  border-color: $ui-primary;
+  color: dark-shades;
+  &:hover{
+    background-color: lighten($ui-primary, 20%);
+    border-color: lighten($ui-primary, 20%);
+  }
+  &:active{
+    background-color: darken($ui-primary, 20%);
+    border-color: darken($ui-primary, 20%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 .2rem darken($ui-primary, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $ui-info;
+  border-color: $ui-info;
+  color: dark-shades;
+  &:hover{
+    background-color: lighten($ui-info, 20%);
+    border-color: lighten($ui-info, 20%);
+  }
+  &:active{
+    background-color: darken($ui-info, 20%);
+    border-color: darken($ui-info, 20%);
+  }
+  &:focus{
+    box-shadow: 0 0 0 .2rem darken($ui-info, 10%);
+  }
+}
+
+.front-aboutme > #aboutme {
+  background-color: rgba($dark-shades, .4);
+}
+
 #aboutme {
   margin-left: auto;
   margin-right: auto;
@@ -62,26 +100,28 @@ li {
   margin-bottom: 4rem;
   text-align: left;
   align-self: center;
-  border: 1px solid $dark-accent;
+  border: 1px solid $light-accent;
   border-radius: 0 2rem 0 2rem;
   max-width: 50rem;
   padding: 2rem 1rem 1rem;
   a {
-    margin-left: 1rem;
+    margin-right: 1rem;
     color: lighten($light-shades, 20%);
   }
   h6 {
-    color: $light-accent;
+    color: $dark-accent;
   }
 }
 
 .form-control {
+  color: $light-shades;
   background-color: $dark-shades;
-  border: 1px solid $dark-accent;
+  border: 1px solid $light-accent;
   &:focus{
+    color: $light-shades;
     background-color: $dark-shades;
-    box-shadow: 0 0 0 .2rem darken($dark-accent, 10%);
-    border-color: $dark-accent;
+    box-shadow: 0 0 0 .2rem darken($light-accent, 10%);
+    border-color: $light-accent;
   }
 }
 
@@ -113,8 +153,16 @@ a {
   }
 }
 
+.post-content-date {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
 .post-content{
  font-family: 'Merriweather', serif;
+
   li {
     display: list-item;
     list-style-type: circle;
@@ -128,14 +176,14 @@ a {
     margin-top: 4rem;
   }
   pre {
-    border-left: 2px solid $dark-accent;
-    border-bottom: 1px solid lighten($dark-accent, 20%);
+    border-left: 2px solid $light-accent;
+    border-bottom: 1px solid darken($light-accent, 20%);
     padding: 1rem;
-    background-color: darken($dark-shades, 5%);
+    background-color: lighten($dark-shades, 5%);
   }
   code {
-    background-color: darken($dark-shades, 5%);
-    color: #212529;
+    background-color: lighten($dark-shades, 5%);
+    color: $light-shades;
   }
   img {
     max-width: 90%;
@@ -146,12 +194,12 @@ a {
     border-radius: .5rem;
   }
   a {
-    color: $light-accent;
+    color: $dark-accent;
   }
 }
 
 .post-date {
-  color: lighten($light-shades, 40%);
+  color: darken($light-shades, 40%);
 }
 
 
@@ -201,7 +249,19 @@ form {
 
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-    color: $dark-shades;
+    color: $main-color;
+    mix-blend-mode: difference;
+    &:hover {
+      color: $dark-accent;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $light-shades;
+  mix-blend-mode: difference;
+  &:hover {
+    color: $dark-accent;
+  }
 }
 
 .navbar-toggler {
@@ -225,15 +285,15 @@ form {
 footer{
   a {
     display: inline;
-    color: $dark-shades;
+    color: $light-shades;
     margin: 0 .5rem;
   }
   position: absolute;
   bottom: 0;
   text-align: center;
   padding: 5rem;
-  color: darken($dark-shades, 50%);
-  background-color: $light-shades;
+  color: darken($light-shades, 50%);
+  background-color: darken($dark-shades, 10%);
 }
 .avertium, .asu {
   img{
@@ -270,7 +330,7 @@ img {
 }
 
 .back-button {
-  text-align: right;
+  text-align: center;
   padding-top: 2rem;
 }
 
@@ -314,25 +374,27 @@ input::-moz-focus-inner {
 .sharebuttons {
   margin: 0 auto 0 auto;
   text-decoration: none;
-  text-align: right;
+  text-align: center;
+
   svg {
+    margin: .5rem;
     width: 2rem;
     height: 2rem;
   }
   .reddit svg {
-    fill: #FF4500;
+    fill: lighten(#FF4500, 0%);
   }
   .googleplus svg {
-    fill: #DC4E41;
+    fill: lighten(#DC4E41, 0%);
   }
   .twitter svg {
-    fill: #1DA1F2;
+    fill: lighten(#1DA1F2, 0%);
   }
   .linkedin svg {
-    fill: #0077B5;
+    fill: lighten(#0077B5, 0%);
   }
   .facebook svg {
-    fill: #4172B8;
+    fill: lighten(#4172B8, 0%);
   }
   * {
     display: inline;
@@ -344,7 +406,7 @@ input::-moz-focus-inner {
 
 
 .fixed-top{
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba($dark-shades, .0);
   &.scrolled {
     background-color: $dark-shades !important;
     transition: background-color 200ms linear;
